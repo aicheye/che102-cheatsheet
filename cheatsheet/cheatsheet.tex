@@ -57,6 +57,8 @@
 
 % Reduce line spacing
 \linespread{0.85}
+\setlength{\FrameSep}{2pt}
+\setlength{\OuterFrameSep}{1.5pt}
 
 %My Environments
 \newtheorem{example}[section]{Example}
@@ -292,88 +294,96 @@
 
   \section{chemical equilibrium}
 
+  \textbf{chemical equilibrium:} at equilibrium, forward rate = reverse rate
+
+  concentrations at equilibrium stay constant, but the reaction is \textbf{still going on}
+
   \subsection{equilibrium constants}
 
-  \textbf{chemical equilibrium:} at equilibrium, forward rate = reverse rate
+  \begin{framed}
+    depends on \textbf{temperature ONLY}
+  \end{framed}
 
   for $aA + bB \rightleftharpoons cC + dD$:
 
-  \textbf{equilibrium constant $K_c$:}
-  $$K_c = \frac{[C]^c[D]^d}{[A]^a[B]^b}$$
+  $$K_c = \frac{[C]^c[D]^d}{[A]^a[B]^b} \quad K_P = \frac{P_C^c P_D^d}{P_A^a P_B^b}$$
 
-  where [ ] = equilibrium concentration in mol/L. $K_c$ is constant at given temperature, independent of initial concentrations
+  \begin{framed}
+    for pressure use units of \textbf{bar}, and $R = 0.08314$ L$\cdot$bar/(mol$\cdot$K)
+  \end{framed}
 
-  \textbf{equilibrium constant $K_P$:}
-  $$K_P = \frac{P_C^c P_D^d}{P_A^a P_B^b}$$
+  only include aqueous and gaseous species, \textbf{do NOT include pure liquids and solids}
 
-  partial pressures at equilibrium, use units of bar. $K_P$ is constant at given temperature
-
-  \textbf{relationship:}
-  $$K_P = K_c(RT)^{\Delta n} \quad \text{where} \quad \Delta n = (c + d) - (a + b)$$
-
-  $R = 0.08314$ L$\cdot$bar/(mol$\cdot$K)
-
-  \textbf{heterogeneous reactions:} pure liquids and solids are \textbf{not included} in equilibrium constant expressions
+  \textbf{relationship:} 
+  $$K_P = K_c(RT)^{\Delta n} \quad \text{or} \quad K_c = K_P(RT)^{-\Delta n}$$
+  where $\Delta n = (c + d) - (a + b)$
 
   \textbf{magnitude of $K$:}
   \begin{itemize}
     \item $K > 10^{10}$: reaction goes to completion
     \item $K < 10^{-10}$: reaction does not occur forward
-    \item $10^{-10} < K < 10^{10}$: equilibrium calculation needed
   \end{itemize}
 
-  \subsection{properties of equilibrium constants}
+  \subsubsection{properties of equilibrium constants}
 
   \begin{itemize}
-    \item multiply reaction by constant $\rightarrow$ raise $K$ to that power
-    \item reverse reaction: $K_{\text{reverse}} = \frac{1}{K_{\text{forward}}}$
-    \item add reactions: multiply equilibrium constants
+    \item multiply reaction by constant $\rightarrow$ raise $K$ to the power of that constant
+    \item $K_{\text{reverse}} = \frac{1}{K_{\text{forward}}}$
+    \item add reactions: \textbf{multiply} equilibrium constants
   \end{itemize}
 
-  \subsection{reaction quotient \& direction}
+  \subsubsection{equilibrium constant calculations}
 
-  \textbf{reaction quotient $Q$:}
-  $$Q_C = \frac{[C]^c[D]^d}{[A]^a[B]^b} \quad Q_P = \frac{P_C^c P_D^d}{P_A^a P_B^b}$$
+  usually use ICE table approach
 
-  calculated same as $K$ but system doesn't need to be at equilibrium
+  \subsection{reaction quotient}
+
+  same formula as $K$ but use the data at ANY point (not necessarily equilibrium)
 
   \textbf{direction of change:}
   \begin{itemize}
-    \item $Q_c < K_c$: reactants in excess, forward reaction
-    \item $Q_c = K_c$: at equilibrium
-    \item $Q_c > K_c$: products in excess, reverse reaction
+    \item $Q_c < K_c$: reactants excess, forward reaction
+    \item $Q_c > K_c$: products excess, reverse reaction
   \end{itemize}
 
   \subsection{le chatelier's principle}
 
-  system responds to change by attaining new equilibrium that partially offsets the change
+  \subsubsection{concentration changes}
 
-  \textbf{change in concentration:}
   \begin{itemize}
-    \item add reactant: $Q_c < K_c$, forward reaction, more products
-    \item add product: $Q_c > K_c$, reverse reaction, more reactants
+    \item add reactant: forward reaction, more products
+    \item add product: reverse reaction, more reactants
   \end{itemize}
 
-  \textbf{change in volume:} reduce volume $\rightarrow$ shifts towards side with fewer gas molecules. effect negligible for condensed phases
+  \subsubsection{volume/pressure changes}
 
-  \textbf{change in pressure:}
+  \begin{framed}
+    if there're SAME number of gas molecules on both sides, changing volume/pressure does NOT affect equilibrium
+  \end{framed}
+
+  recall: when T is constant, $V \propto \frac{1}{P}$
+
   \begin{itemize}
-    \item add/remove gas: affects equilibrium
-    \item change volume: affects equilibrium if gas present
-    \item add inert gas at constant volume: no effect (partial pressures unchanged)
+    \item reduce volume (increase pressure): shifts towards side with fewer gas molecules
+    \item increase volume (decrease pressure): shifts towards side with more gas molecules
   \end{itemize}
 
-  \textbf{change in temperature:}
+  \subsubsection{temperature changes}
+
   \begin{itemize}
-    \item endothermic ($\Delta H > 0$): $T \uparrow \rightarrow K \uparrow \rightarrow$ shifts to products
-    \item exothermic ($\Delta H < 0$): $T \uparrow \rightarrow K \downarrow \rightarrow$ shifts to reactants
-    \item reaction shifts away from "energy term" as temperature increases
+    \item endothermic ($\Delta H > 0$): $T \uparrow$, K increases, shifts to products, and vice versa
+    \item exothermic ($\Delta H < 0$): $T \uparrow$, K decreases, shifts to reactants, and vice versa;
   \end{itemize}
 
-  \textbf{van't hoff equation:}
-  $$\ln\frac{K_2}{K_1} = -\frac{\Delta H}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right)$$
+  K changes with temperature $\rightarrow$ \textbf{van't hoff equation} (see formula sheet)
 
-  estimate $K$ at different temperature. clausius-clapeyron is special case where $K$ = vapour pressure
+  \begin{framed}
+    adding solids, liquids or inert gases does NOT affect equilibrium, \textbf{unless it causes a change of concentration, P, T or V}
+  \end{framed}
+
+  \begin{framed}
+    when one or multiple changes occur and you’re unsure which way the reaction will go, use Q!
+  \end{framed}
 
   \vfill\null
   \columnbreak
