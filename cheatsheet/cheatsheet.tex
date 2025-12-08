@@ -7,6 +7,7 @@
 \usepackage{color,graphicx,overpic}
 \usepackage{hyperref}
 \usepackage[version=4]{mhchem}
+\usepackage{framed}
 
 \pdfinfo{
   /Title (che102 cheat sheet)
@@ -73,6 +74,8 @@
   \setlength{\postmulticols}{1pt}
   \setlength{\multicolsep}{1pt}
   \setlength{\columnsep}{2pt}
+
+  \section{pre-midterm stuff}
 
   \section{rates of reaction}
 
@@ -154,131 +157,136 @@
 
   \textbf{n-order ($n \neq 1$):}
   \begin{itemize}
-    \item $\frac{1}{[A]^{n-1}} = (n-1)akt + \frac{1}{[A]_0^{n-1}}$
+    \item (see formula sheet)
     \item unit of $k$: $\frac{1}{\text{M}^{n-1} \cdot \text{s}}$
     \item $t_{1/2}=\frac{2^{n-1} - 1}{ak(n-1)[A]_0^{n-1}}$
   \end{itemize}
 
   \subsection{arrhenius equation}
 
-  \textbf{two-point form:}
-  $$\ln\frac{k_{2}}{k_{1}}=-\frac{E_{a}}{R}\left(\frac{1}{T_{2}}-\frac{1}{T_{1}}\right)$$
-
-  \begin{itemize}
-    \item $R$ is ($8.314$ J/(mol $\cdot$ K))
-  \end{itemize}
+  preferrably use two-point form
+  
+  use $R = 8.314$ J/(mol $\cdot$ K)
 
   \vfill\null
   \columnbreak
 
   \section{phase equilibrium}
 
-  \subsection{phase transitions \& vapour pressure}
+  \subsection{phase equilibrium}
 
-  \textbf{phase:} region where state of aggregation and chemical composition are uniform. \textbf{note:} phase $\neq$ state of matter
+  \textbf{defn:} rate (forward) = rate (reverse)
+  
+  e.g. vapour liquid equilibrium $\implies$ $\text{rate}_{\text{vap}} = \text{rate}_{\text{cond}}$
 
-  \textbf{phase transition:} matter changes from one phase to another due to temperature/pressure changes
+  \textbf{note:} phase $\neq$ state of matter
 
-  \textbf{vaporization:} molecules pass from liquid surface to vapour state
+  \textbf{phase changes:}
+  $\text{gas} \xrightarrow{\text{condensation}} \text{liquid} \xrightarrow{\text{solidification}} \text{solid}$
+  $\text{gas} \xleftarrow{\text{vaporization}} \text{liquid} \xleftarrow{\text{fusion}} \text{solid}$
+  $\text{gas} \xleftarrow[\text{deposition}]{\text{sublimation}} \text{solid}$
 
-  \textbf{condensation:} molecules pass from vapour to liquid state
+  $\Delta H_{\text{fus}} + \Delta H_{\text{vap}} = \Delta H_{\text{sub}}$
 
-  \textbf{enthalpy of vaporization:}
-  $$\Delta H_{\text{vap}} = H_{\text{vapour}} - H_{\text{liquid}} = -\Delta H_{\text{condensation}}$$
+  \subsection{vapour pressure}
 
-  stronger intermolecular forces $\rightarrow$ higher $\Delta H_{\text{vap}}$
-
-  \textbf{phase change relationships:}
-  $$\text{gas} \xrightarrow{\text{condensation}} \text{liquid} \xrightarrow{\text{solidification}} \text{solid}$$
-  $$\text{gas} \xleftarrow{\text{vaporization}} \text{liquid} \xleftarrow{\text{fusion}} \text{solid}$$
-  $$\text{gas} \xleftarrow[\text{deposition}]{\text{sublimation}} \text{solid}$$
-
-  $$\Delta H_{\text{fus}} + \Delta H_{\text{vap}} = \Delta H_{\text{sub}}$$
-
-  \textbf{phase equilibrium:} no net conversion between phases. at equilibrium: vaporization rate = condensation rate
-
-  \textbf{vapour pressure:} pressure at equilibrium. weak intermolecular forces $\rightarrow$ high vapour pressure (volatile). strong intermolecular forces $\rightarrow$ low vapour pressure (non-volatile)
+  \textbf{vapour pressure:} pressure of vapour at equilibrium
+  
+  weak IMF $\rightarrow$ lower $T_{\text{bp}}$ $\rightarrow$ higher vapour pressure (more volatile); and \textbf{vice versa}
 
   $$P_{\text{vap}} = f(T, \text{type of liquid})$$
 
   \textbf{evaporation vs. boiling:}
   \begin{itemize}
-    \item evaporation: at surface, any temperature
-    \item boiling: throughout liquid, specific temperature where $P_{\text{vap}} = P_{\text{atm}}$
+    \item \textbf{evaporation:} at surface, any temperature
+    \item \textbf{boiling:} throughout liquid, specific temperature ($T_{\text{bp}}$)
   \end{itemize}
 
-  \textbf{boiling point:} temperature where $P_{\text{vap}}(T_{\text{bp}}) = P$. normal boiling point: $P_{\text{vap}} = 1$ atm
+  \textbf{boiling point:} temperature where $P_{\text{vap}}(T_{\text{bp}}) = P$. 
+  
+  normal boiling point: $P_{\text{vap}} = 1$ atm
 
-  higher molecular mass $\rightarrow$ higher polarizability $\rightarrow$ stronger IMF $\rightarrow$ higher bp. exceptions: \ce{H2O}, \ce{HF}, \ce{NH3} (hydrogen bonding)
+  \subsubsection{clausius-clapeyron equation}
 
-  \subsection{clausius-clapeyron equation}
+  (see formula sheet)
 
-  $$\ln P = -A\left(\frac{1}{T}\right) + B$$
+  relates vapour pressure to \textbf{temperature}
 
-  where $A = \frac{\Delta H_{\text{vap}}}{R}$, $R = 8.314$ J/(mol$\cdot$K)
+  can be used for \textbf{ANY phase change} as long as the right enthalpy is used
 
-  \textbf{two-point form:}
-  $$\ln\left(\frac{P_2^{\text{vap}}}{P_1^{\text{vap}}}\right) = -\frac{\Delta H_{\text{vap}}}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right)$$
+  \subsubsection{non-equilibrium stuff (humidity/saturation)}
 
-  plot $\ln P_{\text{vap}}$ vs. $\frac{1}{T}$: slope = $-\frac{\Delta H_{\text{vap}}}{R}$
+  $\displaystyle\%\text{ saturation} = \frac{P_{A}}{P_{A}^{\text{vap}}(T)} \times 100\%$
 
-  \textbf{relative humidity:}
-  $$\%RH = \frac{P_{H_2O}}{P_{H_2O}^{\text{vap}}(T)} \times 100\%$$
+  \textbf{dew point $T_{\text{dp}}$:} temperature where humid air reaches saturation
 
-  \textbf{dew point:} temperature where humid air reaches saturation
+  condensation occurs at \textbf{100 \% saturation}
+
+  humidity refers specifically to $\ce{H2O}$
 
   \subsection{phase diagrams}
 
-  \textbf{phase diagram:} shows regions where phases are in equilibrium (T vs. P)
+  can be used to get the vapour pressure at a temperature (using the equilibrium lines)
 
-  \textbf{critical point:} no phase boundary between liquid/vapour, $\Delta H_{\text{vap}} = 0$, above critical T only gas exists
+  \textbf{triple point:} solid, liquid, gas coexist $\rightarrow$ there can be multiple triple points, but only one is solid-liquid-gas equilibrium
 
-  \textbf{supercritical fluid:} properties of both gas and liquid (e.g., supercritical \ce{CO2} for decaffeinated coffee)
+  \textbf{equilibrium line:} 2 phases in equilibrium
 
-  \textbf{triple point:} solid, liquid, gas coexist
+  \textbf{critical point:} point where substance becomes supercritical fluid
 
-  \subsection{henry's law \& raoult's law}
+  \textbf{supercritical fluid:} neither liquid nor gas, but having properties of both
 
-  \textbf{solution:} homogeneous mixture. solvent: largest amount. solute: smaller amount
+  \textbf{polymorphism:} existence of solid in more than one form
 
-  \textbf{concentrations:}
-  \begin{itemize}
-    \item mole fraction: $x_i = \frac{n_i}{\sum n_j}$
-    \item molarity: $M = \frac{\text{moles solute}}{\text{L solution}}$ (temp dependent)
-    \item molality: $m = \frac{\text{moles solute}}{\text{kg solvent}}$
-  \end{itemize}
+  \textbf{note:} a substance can phase change at multiple different temperatures or pressures, but at a given P (T), it phase changes at the corresponding T (P).
+
+  \subsection{henry's law}
+
+  \textbf{essentially:} gas \textbf{solubility} in liquid increases with increasing \textbf{pressure}
 
   \textbf{ideal solution:} $\Delta H_{\text{soln}} = 0$, similar forces between all components
 
-  \textbf{nonideal solution:} $\Delta H_{\text{soln}} \neq 0$
+  use $P_A = H_A x_A$ when constants have units of \textbf{pressure}, and working with \textbf{mole fractions}
 
-  \textbf{henry's law:} gas solubility increases with pressure
-  $$P_A = H_A x_A \quad \text{or} \quad C_A = k_A P_A$$
+  use $C_A = H_A x_A$ when constants have units of \textbf{pressure \& concentration}, and working with \textbf{concentrations}
 
-  where $H_A$ or $k_A$ = henry's constant (depends on solute/solvent pair and temperature)
+  \subsection{raoult's law}
 
-  \textbf{raoult's law:} solute lowers vapour pressure of solvent
-  $$P_A = x_A P_A^{\text{vap}}$$
+  \textbf{essentially:} adding solute \textbf{lowers} the vapour pressure of solvent
 
-  for binary ideal solution: $P_{\text{total}} = x_A P_A^{\text{vap}} + x_B P_B^{\text{vap}}$
+  $P_A = x_A P_A^{\text{vap}}$ $\rightarrow$ use this if u are given vapour pressures
 
   applies to ideal solutions or dilute solutions ($x_{\text{solv}} > 0.98$)
 
-  \textbf{deviations:}
-  \begin{itemize}
-    \item positive: $P_{\text{total}} > P_{\text{ideal}}$ (weaker unlike interactions)
-    \item negative: $P_{\text{total}} < P_{\text{ideal}}$ (stronger unlike interactions)
-  \end{itemize}
+  solute and solvent both in vapour and in solution
+
+  \textbf{deviations:} positive if total pressure is greater than each individual pure vapour pressure (and vice versa)
 
   \subsection{colligative properties}
 
-  depend on ratio of solute particles to solvent molecules: (1) vapour pressure lowering, (2) boiling point elevation, (3) freezing point depression, (4) osmotic pressure
+  \textbf{defn:} properties of solutions that depend on the \textbf{RATIO} of solute particles to solvent molecules (NOT type of solute)
 
-  $$\Delta P_{\text{solvent}} = -x_{\text{solute}} P_{\text{solvent}}^{\text{vap}}$$
+  \subsubsection{vapour pressure lowering}
 
-  $$\Delta T_{\text{bp}} = i K_b m \quad \Delta T_{\text{fp}} = -i K_f m$$
+  we can use vapour pressure to estimate the \textbf{molar mass} of an unknown solid dissolved in a known liquid
 
-  \textbf{van't hoff factor $i$:} particles per formula unit. min: $i = 1$; max: number of ions (\ce{NaCl} $\rightarrow$ 2, \ce{Pb(NO3)2} $\rightarrow$ 3). $i \rightarrow$ max as dilutes
+  $$M_{\text{solid}}=-\frac{M_{\text{liquid}}m_{\text{solid}}}{m_{\text{liquid}}}\left( \frac{P^{\text{vap}}_{\text{liquid}}}{\Delta P_{\text{liquid}}}+1 \right)$$
+
+  \subsubsection{b.p. elevation \& f.p. depression}
+
+  $\Delta T_{\text{bp}} = i K_b m$, $\Delta T_{\text{fp}} = -i K_f m$
+
+  $m$ is the solute \textbf{MOLALITY (moles solute/kg solvent)}!
+
+  $K_b$ and $K_f$ are constants, dependent on the \textbf{solvent} only
+
+  \textbf{van't hoff factor $i$} $\rightarrow$ for ionic compounds 
+  
+  $i_{\text{min}} = 1$ (pure solid/liquid, no dissociation)
+
+  $i_{\text{max}} = \text{\# of ions}$ (complete dissociation), e.g. 2 for \ce{NaCl}
+
+  $\displaystyle\text{\% dissociation} = \frac{i - 1}{i_{\text{max}} - 1} \times 100\%$
 
   \columnbreak
 
